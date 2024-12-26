@@ -1,0 +1,23 @@
+{
+  "name": "rds-snapshot-to-s3-lambda-function",
+  "version": "1.0.0",
+  "discription": "Lambda function to create RDS snapshots and copy them to S3",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-rds": "^3.716.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/aws-lambda": "^8.10.146",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
