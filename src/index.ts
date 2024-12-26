@@ -6,7 +6,7 @@ const S3BucketName = process.env.S3_BUCKET_NAME || ''
 const IamRoleArn = process.env.IAM_ROLE_ARN || ''
 const KmsKeyId = process.env.KMS_KEY_ID || ''
 
-export const handler: Handler = async (event: APIGatewayEvent, context: Context) => {
+export const handler: Handler = async (event: APIGatewayEvent, _context: Context) => {
   console.log('Received event:', JSON.stringify(event, null, 2))
 
   const exportTaskIdentifier = `snapshot${new Date().toISOString().replace(/[-T:.Z]/g, '')}`
